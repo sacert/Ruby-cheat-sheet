@@ -269,14 +269,42 @@ Useful methods:
 - `each.with_index |x,i|`
 - `find_index(val)`
 - `first / last + (val)` example `first` or `first(5)`
+- `one?` then block
+- `none?` then block
+- `count` or `count(val)` or `count + block`
+
+
 
 ## More Advance data structures
 
 This could be nice
 
+= Turned out to be pretty useless, it just covers a small subset of data structures such as
+stacks, queues, binary trees, graphs, but there are better resources to learn that stuff.
+I am only interested in learning about Ruby coding.
+
 ## OOP and Dynamic Features in Ruby
 
 HUGE!!
+
+Class should have `initialize` method which is called with `new` is issued.
+
+`attr_accessor` :symbol gives getters and setters
+`attr_reader` :symbol gives getters
+`attr_writer` :symbol gives setters | this can be within the `protected` section
+
+When changing the values above, this requires `self.attribute` OR `@attribute`.
+
+Access to global variables within a class use `::`
+
+`is_a?` or `instance_of` to determine if it is that type of Class
+
+`private` = only the class itself can reference this
+`protected` = class and subclasses
+
+`freeze` method makes it so you can't alter it afterwards - probably for saftey reasons
+
+Kinda just skimmed this over since it is getting late - will revise.
 
 ## There are other sections that I could read when I have time but as of now, it shouldn't
 be my main concern.
