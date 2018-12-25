@@ -63,7 +63,7 @@ Useful methods:
 - `%w[some kind of string]` = returns tokenized array
 - `sub / gsub / delete` - alter the string
 - `include?` - contains a string
-- index & rindex (rindex just starts at the right side)
+- `index` and `rindex` (rindex just starts at the right side)
 - `downcase / upcase / capitalize`
 - `puts` vs `print` is that `puts` adds new lines.
 - `to\_s` vs `to\_str`, former is defined by class to not return garbage
@@ -72,9 +72,6 @@ Useful methods:
 ## Skipping the Regex section for now, can go back to it later
 
 ## Internationalization in Ruby
-
-_This section seems a bit premature to be reading but whatever. Likely not ganna write many 
-on the topic for now._
 
 - Ruby uses UTF-8 as the default (which is pretty much just ASCII)
 - `i18n` is a gem we use where we have a config file that is used for translation purposes
@@ -86,36 +83,24 @@ feel I need to learn in depth and using the `i18n` gem for different languages.
 
 ## Performing Numerical Calculations
 
-_Overview: Cool stuff here but not required when building CRUD apps - at least not the one I am
-currently working on._
+_Overview: Very extensive topic but not required when building CRUD apps - at least not the one I am currently working on so most of this goes to the wayside._
 
-Cool, so you can express binary in the following:
-`0b10010`
-Hex:
-`0x0034`
-Octal:
-`01234` - with a 0 infront (Might have to be careful of that)
+Binary: `0b10010`
+Hex: `0x0034`
+Octal: `01234` - **with a 0 in-front, good to note this**
 
 For longer numbers, use `_` to denote commas, just easier to read even though it doesnt do anything.
 
-Somethings to note are that Float has constants for MIN and MAX.
+`Float::MIN` && `Float::MAX` are defined
 
 `**` used to exponent
 
 Useful methods:
+
 - `floor`
 - `ceil`
 - `round`
-
-- For large/small numbers, use `BigDecimal` and `Bignum` - this is cool but unlikely to use
-very large numbers within Ruby.
-
-- Rationals, use `Rational` - again very unlikely to be using this
-
-There are ton of other mathematical operations such a matrix/vector multiplication, handling
-bytes, trig functions, logs, etc. Bottom ground, there are a TON of stuff, and some really cool
-stuff like built in variance/standard deviation calculations but I'm only using Ruby for the web
-where most of this stuff is unfortunetly not needed and therefore most of it can be overlooked.
+- `to_f` and `to_i`
 
 ## Symbols and Ranges
 
