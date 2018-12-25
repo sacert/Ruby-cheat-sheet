@@ -47,6 +47,12 @@ Single vs Double quote:
 - Use single most of the time unless interpolation is required. Single is much more strict
 only few escape characters.
 
+Can append to string using `<<`
+Can convert a string to a int/float using `to\_i` or `to\_f`
+Initialize `Float` and `Integer` using the following: `Integer('number')` since this returns an errors.
+
+Interpolation formula: (Double quotes) "#{var} something something"
+
 **NOTE:** Strings are very similar to arrays and vice versa. They share many methods.
 
 Useful methods:
@@ -61,9 +67,7 @@ Useful methods:
 - `downcase / upcase / capitalize`
 - `puts` vs `print` is that `puts` adds new lines.
 - `to\_s` vs `to\_str`, former is defined by class to not return garbage
-- Can append to string using `<<`
-- Can convert a string to a int/float using `to\_i` or `to\_f`
-- Initialize `Float` and `Integer` using the following: `Integer('number')` since this returns an errors.
+- `join` to join tockenized string array
 
 ## Skipping the Regex section for now, can go back to it later
 
