@@ -190,4 +190,37 @@ Useful methods:
 
 ## Working with Time and Date
 
-Likely ganna quickly go over, don't come up that often at work.
+_Overview: two objects of Date and Time, these rarely come up so for the most part just google
+it, mainly just going to be using Time.now._
+
+Centered around `Time` and `Date` object.
+
+Time is more about the current, Time == 12 am
+Date is about a set day
+
+Useful methods:
+- `new`
+- `now`
+- `[y/w]day
+- `utc` for the standard time
+- `zone`
+- `local` to equate to local time zone
+- `.hour`
+- `.min`
+
+epoch! Seconds that have elapsed since January 1, 1970. To get this, simple just `to_i`
+
+## Arrays, Hashes, and Other Enumerables
+
+Ganna be very important
+
+## More Advance data structures
+
+This could be nice
+
+## OOP and Dynamic Features in Ruby
+
+HUGE!!
+
+## There are other sections that I could read when I have time but as of now, it shouldn't
+be my main concern.
