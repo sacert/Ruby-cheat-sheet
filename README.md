@@ -15,7 +15,7 @@ List of questions that I have while learning. I can come back to write them here
 
 - Is Ruby a purely OOP language? Yes
 
-## Overview notes on Ruby:
+## Overview/random notes on Ruby:
 
 - An `Object` contains the following:
   - attributes
@@ -23,68 +23,30 @@ List of questions that I have while learning. I can come back to write them here
 - Garbage collection (GC) handles destructors
 - Ruby does not allow multi-inheritence
 - Abstract classes can be written but in a hack-ish way
-
-When writing in Ruby, the goal should *ALWAYS* be to make it readable. (example would be
+- When writing in Ruby, the goal should **ALWAYS** be to make it readable. (example would be
 using `unless` instead of `if !`)
+- Comments are obvious _EXCEPT_ that multiline comments use `=begin` and `=end`
+- `===` is defined by the class. It is ambigious.
 
-Interpreted language. Slower because of this but faster prototyping.
+## Keywords and naming conventions:
 
-#### Keywords and naming conventions:
-
-Certain keywords that can't be overwritten. They are ones that you won't overwrite anyways
+Certain keywords can't be overwritten. They are ones that you won't overwrite anyways
 so no need to watch out for these.
 
 Naming conventions are important:
+(from the book)
+- `local_variables` lowercase letter or an underscore.
+- `$global_variables` begin with $ **(NEVER USE BUT KNOW)**
+- `@instance_variables` (within an object) begin with @
+- `@@class_variables` (within a class) begin with @@
+- `CONSTANTS` are in all capital letters
 
-The book has the following:
-
-• Local variables (and pseudovariables such as self and nil) begin with a
-• lowercase letter or an underscore.
-• Global variables begin with $ (a dollar sign).
-• Instance variables (within an object) begin with @ (an at sign).
-• Class variables (within a class) begin with @@ (two at signs).
-• Constants begin with capital letters.
-• Special variables starting with a dollar sign (such as $1 and $/) are set by the Ruby
-interpreter itself.
-
-To shorten, use common sense. It is the same for almost every language except global variables
-start with a `$`, class variables start with a `@@`, and although it states that constants begin
-with a capital, make the entire variable name in all caps because that is how it is for every
-other language..
-
-#### Random bits
-
-_Guess casue it is the overview section that these things are included, they have their own sections
-so don't need to go over this too much_
-
-Comments are obvious _EXCEPT_ that multiline comments use `=begin` and `=end` cause why not.
+## Strings:
 
 The difference between a single quote and double quote string is that single quote strings are as is.
 Meaning you don't alter them, maybe poor wording, but with double quotes you can use interpolation. `#{var}`
 Our code has a mix of double and single quotes littered everywhere. Try to be consistent when writing your own code.
 
-Interperted language means spaces matter! Use them carefully or you will recieve a lot of errors.
-
-!!! Ruby has no Boolean class...???
-
-`===` is defined by the class. When to use? I guess it depends.
-For Range, it looks if it is within that range. (Ex. (1..4) === 2)
-For a Class, it looks if they share the same class (Ex. String === "hi")
-
-`..` vs `...`:
-Former is inclusive of upper bound, latter is not.
-
-@@ has a class wide scope - contain some shared memory.
-@ instance variable, limited to the scope of instantiation.
-
-Ruby constants are a *LIE*, they can be changed outside the instance. Just not within them.
-
-
----------------
-
-Okay that was just a lot of fluff just thrown around but now for some actual drilled down stuff.
-
-## Strings:
 
 Rough notes: More to add whenever I can. No need to memorize everything here.
 
@@ -174,6 +136,8 @@ where most of this stuff is unfortunetly not needed and therefore most of it can
 _Overview: Symbols are mainly just immutable strings, a lot of times you can replace one for the
 other. Know_`to_s`_ and _`to_sym`_. For Range, know that to to initialize, use parenthesis and
 about_ `to_a`.
+
+- `..` vs `...`: Former is inclusive of upper bound, latter is not.
 
 - Symbols are immutable strings; being immutable means that they share the same memory address.
 Example: [:sym, :sym] will use the same memory address.
