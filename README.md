@@ -1,5 +1,4 @@
 # Ruby Cheat Sheet
-----
 
 _Note:_ Format later, look into `md` formating. Using *The Ruby Way* to learn Ruby (will 
 not cover it all though; certain chapters are not useful to me)
@@ -10,21 +9,23 @@ At work I've been just googling everything but should really remember certain th
 People praise Ruby as being fun to code in, Rails sucks but Ruby can be fun so time to 
 properly learn it - even though it is dreadfully slow. :(
 
-#### Questions to answer:
+## Questions to answer:
+
+List of questions that I have while learning. I can come back to write them here.
 
 - Is Ruby a purely OOP language? Yes
 
+## Overview notes on Ruby:
 
-#### Overview notes on Ruby:
-
-Object - contains attributes and methods
-When class is created, becomes instantiated (instance is created: that is the object) 
-Has a constructor but NOT a destructor - garbage collection handles that.
-Multiple inheritence is a no-go.
-No abstract classes - can be hacked together though.
+- An `Object` contains the following:
+  - attributes
+  - methods
+- Garbage collection (GC) handles destructors
+- Ruby does not allow multi-inheritence
+- Abstract classes can be written but in a hack-ish way
 
 When writing in Ruby, the goal should *ALWAYS* be to make it readable. (example would be
-using `unless` instead of `if !`
+using `unless` instead of `if !`)
 
 Interpreted language. Slower because of this but faster prototyping.
 
