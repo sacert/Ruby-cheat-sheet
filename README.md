@@ -212,7 +212,63 @@ epoch! Seconds that have elapsed since January 1, 1970. To get this, simple just
 
 ## Arrays, Hashes, and Other Enumerables
 
-Ganna be very important
+Arrays:
+
+Monster, there are so many things you can do with arrays. It is pretty crazy. 
+
+*Note to self*: compile a list of methods and things from top down of what is most important.
+
+Useful methods:
+- `values_at` (can take a range, returns an array)
+- can determine where to start and the end point - similar to Strings
+- `length` and `size` (size is an alias)
+- `sort` - built in sorting method
+- `detect` or `find` (alias) to find the first
+- `find_all`/`select` to return an array that matches
+- `reject` is the complementary method to `select`
+- `min` and `max`
+- `.index` an array to get the index instead
+- `sample` to get a random value
+- `delete` and `delete_at` for index
+- `delete_if` deletes if block is true
+- `compact` removes all `nil` values
+- `slice` removes element from array
+- `shift` and `pop` to remove the front and back of an array
+- that is for removing, to add to from or back, just concatentate
+- can add `with_index` after `each`
+- `uniq` is also useless
+
+Initializing an array is pretty obvious EXCEPT that you can state the size and default value:
+`Array.new(10, "anything")` or `Array.new(3)`
+
+- arrays can accept a Ranges (arr[0..3])
+- you can even replace an array using a range (arr[2..4] = [123,123,123])
+- NOTE: arr[2..2] = [123,123,123] would insert it there
+
+Hashes:
+
+Initialize, can be through `new` or just create a hash and assign it.
+Example: var = {one: "something", two: "something else"}
+
+Useful methods:
+- `to_a` and `to_h`
+- `to_h` from an array requires an array within an array with 2 elements [[something, else]]
+- `fetch` will return an exception if the hash is not found - much more useful I would say
+- interating with `|key, value|`
+- `delete` using key
+- can use other methods too such as `delete_if`, `shift`, couple others
+- use `key?` or `include` to determine if hash is there
+- `keys` and `values` to get an array of their respective outputs
+- `merge` to merge two hashes, can include block
+
+Enumerations:
+
+Useful methods:
+
+- `any?` and `all?` check if `nil` or accept a block
+- `each.with_index |x,i|`
+- `find_index(val)`
+- `first / last + (val)` example `first` or `first(5)`
 
 ## More Advance data structures
 
