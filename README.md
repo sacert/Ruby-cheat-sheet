@@ -1,7 +1,7 @@
 # Ruby Cheat Sheet
 ----
 
-_Note:_ Format latter, look into `md` formating. Using *The Ruby Way* to learn Ruby (will 
+_Note:_ Format later, look into `md` formating. Using *The Ruby Way* to learn Ruby (will 
 not cover it all though; certain chapters are not useful to me)
 
 ##Purpose: 
@@ -78,6 +78,7 @@ Former is inclusive of upper bound, latter is not.
 
 Ruby constants are a *LIE*, they can be changed outside the instance. Just not within them.
 
+
 ---------------
 
 Okay that was just a lot of fluff just thrown around but now for some actual drilled down stuff.
@@ -111,12 +112,57 @@ to get. Ex str[6, 2], get 2 characters after the 6th character.
 
 HUGE! `puts` vs `print` is that `puts` adds new lines.
 
-- `to_s` vs `to_str`. Former should return a string of the object, likely to give me garbage. 
+- `to\_s` vs `to\_str`. Former should return a string of the object, likely to give me garbage. 
 The latter will be defined in the class to constuct how I want to return a string.
 - Can append to string using `<<`
-- Can convert a string to a int/float using `to_i` or `to_f`
+- Can convert a string to a int/float using `to\_i` or `to\_f`
 But also note that something it is better to use `Integer('123')` or `Float`. Returns
 an error and can be useful for binary representations.
 - Can use `count` to count the number of characters
 
-##Skipping the Regex section for now, can go back to it later.
+##Skipping the Regex section for now, can go back to it later
+
+##Internationalization in Ruby
+
+_This section seems a bit premature to be reading but whatever. Likely not ganna write many 
+on the topic for now._
+
+- Ruby uses UTF-8 as the default (which is pretty much just ASCII)
+- `i18n` is a gem we use where we have a config file that is used for translation purposes
+- By setting the local language, get the YAML which determines what to write
+- located in `local/[language].yml`
+
+That is pretty much it for this chapter. Just understanding how encoding works - which I don't
+feel I need to learn in depth and using the `i18n` gem for different languages.
+
+##Performing Numerical Calculations
+
+Cool, so you can express binary in the following:
+`0b10010`
+Hex:
+`0x0034`
+Octal:
+`01234` - with a 0 infront (Might have to be careful of that)
+
+For longer numbers, use `_` to denote commas, just easier to read even though it doesnt do anything.
+
+Somethings to note are that Float has constants for MIN and MAX.
+
+`**` used to exponent
+
+Useful methods:
+- `floor`
+- `ceil`
+- `round`
+
+- For large/small numbers, use `BigDecimal` and `Bignum` - this is cool but unlikely to use
+very large numbers within Ruby.
+
+- Rationals, use `Rational` - again very unlikely to be using this
+
+There are ton of other mathematical operations such a matrix/vector multiplication, handling
+bytes, trig functions, logs, etc. Bottom ground, there are a TON of stuff, and some really cool
+stuff like built in variance/standard deviation calculations but I'm only using Ruby for the web
+where most of this stuff is unfortunetly not needed and therefore most of it can be overlooked.
+
+
