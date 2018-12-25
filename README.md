@@ -137,6 +137,9 @@ feel I need to learn in depth and using the `i18n` gem for different languages.
 
 ##Performing Numerical Calculations
 
+_Overview: Cool stuff here but not required when building CRUD apps - at least not the one I am
+currently working on._
+
 Cool, so you can express binary in the following:
 `0b10010`
 Hex:
@@ -165,4 +168,22 @@ bytes, trig functions, logs, etc. Bottom ground, there are a TON of stuff, and s
 stuff like built in variance/standard deviation calculations but I'm only using Ruby for the web
 where most of this stuff is unfortunetly not needed and therefore most of it can be overlooked.
 
+##Symbols and Ranges
 
+_Overview: Symbols are mainly just immutable strings, a lot of times you can replace one for the
+other. Know_`to_s`_ and _`to_sym`_. For Range, know that to to initialize, use parenthesis and
+about_ `to_a`.
+
+- Symbols are immutable strings; being immutable means that they share the same memory address.
+Example: [:sym, :sym] will use the same memory address.
+- Symbols can be defined from strings like `:"hello world"`, might be a little weird though
+- Use Symbols if you never need to change their values: ex direction[:north, :east, :south, :west]
+- String to Symbol and vice versa = `to_s` and `to_sym`
+
+- `..` inclusive, `...` exclusive
+
+Useful methods:
+- `first` and `last`
+- `to_a`
+- `include?`
+- Range is defined using parenthesis
