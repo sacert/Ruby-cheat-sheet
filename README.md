@@ -3,19 +3,19 @@
 _Note:_ Format later, look into `md` formating. Using *The Ruby Way* to learn Ruby (will 
 not cover it all though; certain chapters are not useful to me)
 
-## Purpose: 
+## Purpose
 
 At work I've been just googling everything but should really remember certain things.
 People praise Ruby as being fun to code in, Rails sucks but Ruby can be fun so time to 
 properly learn it - even though it is dreadfully slow. :(
 
-## Questions to answer:
+## Questions to answer
 
 List of questions that I have while learning. I can come back to write them here.
 
 - Is Ruby a purely OOP language? Yes
 
-## Overview/random notes on Ruby:
+## Overview/random notes on Ruby
 
 - An `Object` contains the following:
   - attributes
@@ -28,7 +28,7 @@ using `unless` instead of `if !`)
 - Comments are obvious _EXCEPT_ that multiline comments use `=begin` and `=end`
 - `===` is defined by the class. It is ambigious.
 
-## Keywords and naming conventions:
+## Keywords and naming conventions
 
 Certain keywords can't be overwritten. They are ones that you won't overwrite anyways
 so no need to watch out for these.
@@ -41,47 +41,29 @@ Naming conventions are important:
 - `@@class_variables` (within a class) begin with @@
 - `CONSTANTS` are in all capital letters
 
-## Strings:
+## Strings
 
-The difference between a single quote and double quote string is that single quote strings are as is.
-Meaning you don't alter them, maybe poor wording, but with double quotes you can use interpolation. `#{var}`
-Our code has a mix of double and single quotes littered everywhere. Try to be consistent when writing your own code.
+Single vs Double quote:
+- Use single most of the time unless interpolation is required. Single is much more strict
+only few escape characters.
 
-
-Rough notes: More to add whenever I can. No need to memorize everything here.
-
-Single quote:
-A lot more strict - very literal. Escape character only for `'` and `\`
-Double quote:
-Use for interpolation and escape characters.
+**NOTE:** Strings are very similar to arrays and vice versa. They share many methods.
 
 Useful methods:
 
-- `length`\`size` (size is an alias)
-- `each/\_[char/byte/line]
-- `split ( ",", num)` = returns tokenized array
-- `%w[some kind of string] = returns tokenized array
-- `lowercase`, `uppercase`, `capitalize`
-- `split` and `join`
-- `reverse`
-- `delete` to remove certain characters
-
-You can get a substring by using an array, giving either Range or starting points & how many 
-to get. Ex str[6, 2], get 2 characters after the 6th character.
-
-- sub & gsub, sub just changes the first things while gsub looks at the entire string.
+- `length/size` - get char count
+- `insert` - insert string in position `string.insert(3, 'test')`
+- `split` - return an array of tokenz `string.split(' ')`
+- `%w[some kind of string]` = returns tokenized array
+- `sub / gsub / delete` - alter the string
+- `include?` - contains a string
 - index & rindex (rindex just starts at the right side)
-- include? - string match
-
-HUGE! `puts` vs `print` is that `puts` adds new lines.
-
-- `to\_s` vs `to\_str`. Former should return a string of the object, likely to give me garbage. 
-The latter will be defined in the class to constuct how I want to return a string.
+- `downcase / upcase / capitalize`
+- `puts` vs `print` is that `puts` adds new lines.
+- `to\_s` vs `to\_str`, former is defined by class to not return garbage
 - Can append to string using `<<`
 - Can convert a string to a int/float using `to\_i` or `to\_f`
-But also note that something it is better to use `Integer('123')` or `Float`. Returns
-an error and can be useful for binary representations.
-- Can use `count` to count the number of characters
+- Initialize `Float` and `Integer` using the following: `Integer('number')` since this returns an errors.
 
 ## Skipping the Regex section for now, can go back to it later
 
