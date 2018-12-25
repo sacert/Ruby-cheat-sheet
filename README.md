@@ -4,18 +4,18 @@
 _Note:_ Format later, look into `md` formating. Using *The Ruby Way* to learn Ruby (will 
 not cover it all though; certain chapters are not useful to me)
 
-##Purpose: 
+## Purpose: 
 
 At work I've been just googling everything but should really remember certain things.
 People praise Ruby as being fun to code in, Rails sucks but Ruby can be fun so time to 
 properly learn it - even though it is dreadfully slow. :(
 
-####Questions to answer:
+#### Questions to answer:
 
 - Is Ruby a purely OOP language? Yes
 
 
-####Overview notes on Ruby:
+#### Overview notes on Ruby:
 
 Object - contains attributes and methods
 When class is created, becomes instantiated (instance is created: that is the object) 
@@ -28,7 +28,7 @@ using `unless` instead of `if !`
 
 Interpreted language. Slower because of this but faster prototyping.
 
-####Keywords and naming conventions:
+#### Keywords and naming conventions:
 
 Certain keywords that can't be overwritten. They are ones that you won't overwrite anyways
 so no need to watch out for these.
@@ -51,7 +51,7 @@ start with a `$`, class variables start with a `@@`, and although it states that
 with a capital, make the entire variable name in all caps because that is how it is for every
 other language..
 
-####Random bits
+#### Random bits
 
 _Guess casue it is the overview section that these things are included, they have their own sections
 so don't need to go over this too much_
@@ -83,7 +83,7 @@ Ruby constants are a *LIE*, they can be changed outside the instance. Just not w
 
 Okay that was just a lot of fluff just thrown around but now for some actual drilled down stuff.
 
-##Strings:
+## Strings:
 
 Rough notes: More to add whenever I can. No need to memorize everything here.
 
@@ -120,9 +120,9 @@ But also note that something it is better to use `Integer('123')` or `Float`. Re
 an error and can be useful for binary representations.
 - Can use `count` to count the number of characters
 
-##Skipping the Regex section for now, can go back to it later
+## Skipping the Regex section for now, can go back to it later
 
-##Internationalization in Ruby
+## Internationalization in Ruby
 
 _This section seems a bit premature to be reading but whatever. Likely not ganna write many 
 on the topic for now._
@@ -135,7 +135,7 @@ on the topic for now._
 That is pretty much it for this chapter. Just understanding how encoding works - which I don't
 feel I need to learn in depth and using the `i18n` gem for different languages.
 
-##Performing Numerical Calculations
+## Performing Numerical Calculations
 
 _Overview: Cool stuff here but not required when building CRUD apps - at least not the one I am
 currently working on._
@@ -168,7 +168,7 @@ bytes, trig functions, logs, etc. Bottom ground, there are a TON of stuff, and s
 stuff like built in variance/standard deviation calculations but I'm only using Ruby for the web
 where most of this stuff is unfortunetly not needed and therefore most of it can be overlooked.
 
-##Symbols and Ranges
+## Symbols and Ranges
 
 _Overview: Symbols are mainly just immutable strings, a lot of times you can replace one for the
 other. Know_`to_s`_ and _`to_sym`_. For Range, know that to to initialize, use parenthesis and
@@ -187,3 +187,7 @@ Useful methods:
 - `to_a`
 - `include?`
 - Range is defined using parenthesis
+
+## Working with Time and Date
+
+Likely ganna quickly go over, don't come up that often at work.
