@@ -28,6 +28,28 @@ using `unless` instead of `if !`)
 - Comments are obvious _EXCEPT_ that multiline comments use `=begin` and `=end`
 - `===` is defined by the class. It is ambigious.
 
+
+--
+Side note about blocks, procs, and lambdas:
+- Proc and Lambda are essentially just blocks so that you can define once and just reference it
+- Converting a Proc to a block uses the `&` operator
+- Difference between lambdas and procs are that returns are different and lambdas check number of arguments
+
+Example:
+
+```
+proc = Proc.new { |x| x * 2 }
+[1,2,3].each(&proc)
+```
+
+- `.dig` is also very useful, use it inplace of `&.`
+- `&:` calls method on variable
+
+Example:
+
+```
+[1,2,3].each(&:to_s)
+```
 ## Keywords and naming conventions
 
 Certain keywords can't be overwritten. They are ones that you won't overwrite anyways
