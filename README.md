@@ -50,6 +50,9 @@ Example:
 ```
 [1,2,3].each(&:to_s)
 ```
+
+- `a || a = b` is **VERY** useful
+
 ## Keywords and naming conventions
 
 Certain keywords can't be overwritten. They are ones that you won't overwrite anyways
